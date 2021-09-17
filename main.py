@@ -2,6 +2,7 @@ from pprint import pprint, pformat
 import requests
 from bs4 import BeautifulSoup
 import json
+import csv
 
 articles = []
 for page in range(1, 6):
@@ -40,4 +41,13 @@ for page in range(1, 6):
 
 with open('result.txt', 'w') as file:
     file.write(pformat(articles))
+# with open('result.csv', 'w') as file:
+#     writer = csv.writer(file, delimiter="\t")
+#     for article in articles:
+#         writer.writerow([article['id'], article['title'], article['author'], article['published'], article['full_version'], article['body']])
+import pickle
+with open('file.pickle', 'wb') as file:
+    pickle.dump(articles, file)
+
+
 
