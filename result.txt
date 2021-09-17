@@ -1,0 +1,60 @@
+{'Cloudflare: библиотеки JavaScript практически никогда не обновляются после установки': {'author': '\n'
+                                                                                                    '      '
+                                                                                                    'AnnieBronson\n'
+                                                                                                    '     '},
+ 'Facebook и Google выпустили Yarn, новый менеджер пакетов для JavaScript': {'author': '\n'
+                                                                                       '      '
+                                                                                       'ragequit\n'
+                                                                                       '     '},
+ 'Google Chrome начнет блокировать JavaScript-редирект по кликам на ссылки': {'author': '\n'
+                                                                                        '      '
+                                                                                        'maybe_elf\n'
+                                                                                        '     '},
+ 'JavaScript выходит за пределы Web в 2014 году': {'author': '\n'
+                                                             '      '
+                                                             'Elusive_Dream\n'
+                                                             '     '},
+ 'JavaScript выходит за пределы Web в 2015 году': {'author': '\n'
+                                                             '      '
+                                                             'Elusive_Dream\n'
+                                                             '     '},
+ 'JavaScript исполнилось 25 лет': {'author': '\n      ru_vds\n     '},
+ 'JavaScript — лучший язык программирования для начинающих. Так это или нет?': {'author': '\n'
+                                                                                          '      '
+                                                                                          'ru_vds\n'
+                                                                                          '     '},
+ 'Javascript: фрактал отсоса': {'author': '\n      PerlPower\n     '},
+ 'Kha vs HTML5: Компилируем JavaScript в C++': {'author': '\n'
+                                                          '      Zaphy\n'
+                                                          '     '},
+ 'Linux Foundation запустил «перезагрузку» JavaScript-сообщества': {'author': '\n'
+                                                                              '      '
+                                                                              'semen_grinshtein\n'
+                                                                              '     '},
+ 'Nginx + серверный Javascript': {'author': '\n      FrolovS\n     '},
+ 'Завершён перевод «Современного учебника JavaScript»': {'author': '\n'
+                                                                   '      '
+                                                                   'aruseni\n'
+                                                                   '     '},
+ 'Краткая история JavaScript. Часть 1': {'author': '\n'
+                                                   '      octob3rmut3\n'
+                                                   '     '},
+ 'Обновление Chrome обещает увеличить срок работы от батареи на 20% путём оптимизации JavaScript в фоновых вкладках': {'author': '\n'
+                                                                                                                                 '      '
+                                                                                                                                 'denis-19\n'
+                                                                                                                                 '     '},
+ 'Первое знакомство с JavaScript-библиотекой Solid': {'author': '\n'
+                                                                '      ru_vds\n'
+                                                                '     '},
+ 'Почему JavaScript пожирает HTML: примеры кода': {'author': '\n'
+                                                             '      owlnagi\n'
+                                                             '     '},
+ 'Сочиняя ПО: Почему стоит изучать ФП на JavaScript?': {'author': '\n'
+                                                                  '      '
+                                                                  'nixxa\n'
+                                                                  '     '},
+ 'Тренды JavaScript на 2015 год': {'author': '\n      kichik\n     '},
+ 'Цена JavaScript в 2018 году': {'author': '\n      ru_vds\n     '},
+ 'Чем отличаются JavaScript и ECMAScript?': {'author': '\n'
+                                                       '      NIX_Solutions\n'
+                                                       '     '}}
