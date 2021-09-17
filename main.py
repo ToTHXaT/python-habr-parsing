@@ -4,10 +4,12 @@ from bs4 import BeautifulSoup
 import json
 import csv
 
+order = ['relevance', 'date', 'rating'][0]
+
 articles = []
 for page in range(1, 6):
     search = 'WebAssembly'
-    page = requests.get(f'https://habr.com/ru/search/page{page}?q={search}&target_type=posts&order=relevance')
+    page = requests.get(f'https://habr.com/ru/search/page{page}?q={search}&target_type=posts&order={order}')
 
     soup = BeautifulSoup(page.text, "html.parser")
     els = soup.find_all("article", class_="tm-articles-list__item")
