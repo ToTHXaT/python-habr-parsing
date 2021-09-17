@@ -1,42 +1,43 @@
 from pprint import pprint, pformat
 import requests
 from bs4 import BeautifulSoup
-
-search = 'JavaScript'
-page = requests.get(f'https://habr.com/ru/search/?q={search}&target_type=posts&order=relevance')
-
-with open('index.html', 'w') as file:
-    file.write(page.text)
-
-
-soup = BeautifulSoup(page.text, "html.parser")
-els = soup.find_all("article")
+import json
 
 articles = []
-for el in els:
-    title = el.find('h2', class_='tm-article-snippet__title tm-article-snippet__title_h2')
-    title_span = title.find('span')
-    title_text = title_span.text
+for page in range(1, 6):
+    search = 'WebAssembly'
+    page = requests.get(f'https://habr.com/ru/search/page{page}?q={search}&target_type=posts&order=relevance')
 
-    user = el.find('span', class_='tm-user-info__user')
-    time = el.find('span', class_='tm-article-snippet__datetime-published')
-    link = el.find_all('a', class_='tm-article-snippet__readmore')
-    body = el.find('div', class_='article-formatted-body')
+    soup = BeautifulSoup(page.text, "html.parser")
+    els = soup.find_all("article", class_="tm-articles-list__item")
 
-    try:
-        l = link[0]
-    except:
-        l = None
+    if len(els) == 0:
+        break
 
-    articles.append({
-        'title': title_text,
-        'author': user.text.strip(),
-        'published': time.text.strip(),
-        'full_version': l,
-        'body': body.text.strip()
-    })
+    for el in els:
+        title = el.find('h2', class_='tm-article-snippet__title tm-article-snippet__title_h2')
+        title_span = title.find('span')
+        title_text = title_span.text
 
-pprint(articles)
-# with open('result.txt', 'w') as file:
-#     file.write(pformat(article))
+        user = el.find('span', class_='tm-user-info__user')
+        time = el.find('span', class_='tm-article-snippet__datetime-published')
+        link = el.find('a', class_='tm-article-snippet__readmore', href=True)
+        body = el.find('div', class_='article-formatted-body')
+
+        try:
+            link = 'habr.com' + link['href']
+        except:
+            link = None
+
+        articles.append({
+            'id': el.get('id'),
+            'title': title_text,
+            'author': user.text.strip(),
+            'published': time.text.strip(),
+            'full_version': link,
+            'body': body.text.strip(),
+        })
+
+with open('result.txt', 'w') as file:
+    file.write(pformat(articles))
 
