@@ -1,7 +1,6 @@
-from pprint import pprint
 from collections import Counter
 import pickle
-import os, sys
+import os
 
 from natasha import (
     NamesExtractor,
@@ -11,8 +10,6 @@ from natasha import (
     NewsNERTagger,
     NewsEmbedding,
 )
-
-import stanza
 
 from habr.parser.article import Article
 from habr.parser.search import SearchParser
@@ -35,19 +32,6 @@ def main():
             print('Loading data from file')
             articles: list[Article] = pickle.load(file)
             print('Finished loading data')
-
-
-    # import nltk
-    # nltk.download('punkt')
-    # nltk.download('stopwords')
-    # from rake_nltk import Rake
-    #
-    # text = articles[0].get_all_text()
-    #
-    # rake = Rake()
-    # rake.extract_keywords_from_text(text)
-    # kw = rake.get_ranked_phrases_with_scores()
-    # pprint(kw)
 
     from pymorphy2 import MorphAnalyzer
 
@@ -75,15 +59,6 @@ def main():
 
     wc.to_file(f'{search}_kw_result.png')
 
-    # stanza.download('ru')
-    #
-    # nlp = stanza.Pipeline(lang='ru', processors='tokenize,ner')
-    # for article in articles:
-    #     doc = nlp(article.get_all_text())
-    #     print(*[f'entity: {ent.text}\ttype: {ent.type}' for sent in doc.sentences for ent in sent.ents if ent.type == 'PER'], sep='\n')
-
-
-    # print(articles)
 
     if not os.path.isfile(f'{search}_person_result.png'):
 
@@ -101,8 +76,6 @@ def main():
                     span.normalize(morph_vocab)
                     span.extract_fact(names_extractor)
 
-                    # print(span.normal, span.fact)
-
             for span in doc.spans:
                 if span.type == 'PER':
                     v = ' '.join(span.fact.as_dict.values()) if span.fact else ''
@@ -110,9 +83,6 @@ def main():
                         continue
                     word = pymorph.parse(v)[0].normal_form.lower()
                     persons[word] = persons.get(word, 0) + 1
-                    # print(word)
-
-        # pprint(Counter(persons).most_common())
 
         from wordcloud import WordCloud
 
