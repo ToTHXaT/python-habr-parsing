@@ -1,2 +1,4 @@
 .idea
 wikiSpider
+*.pyc
+__pycache__

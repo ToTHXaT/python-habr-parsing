@@ -9,6 +9,12 @@ requests = "*"
 scrapy = "*"
 notebook = "*"
 nltk = "*"
+natasha = "*"
+wordcloud = "*"
+multi-rake = "*"
+stanza = "*"
+yake = "*"
+rake-nltk = "*"
 
 [dev-packages]
 
