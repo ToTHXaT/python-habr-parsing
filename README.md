@@ -13,5 +13,8 @@ The search parameter can be changed inside source code in ```main.py```, by modi
 
 Results are dumped into *{search}_kw_result.png* and *{search}_person_result.png*
 
-> [Keywords](https://raw.githubusercontent.com/ToTHXaT/python-habr-parsing/main/%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_kw_result.png)
-> [Persons](https://raw.githubusercontent.com/ToTHXaT/python-habr-parsing/main/%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_person_result.png)
+## Криптография results
+### Keywords
+![Keywords](https://raw.githubusercontent.com/ToTHXaT/python-habr-parsing/main/%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_kw_result.png)
+### Persons
+![Persons](https://raw.githubusercontent.com/ToTHXaT/python-habr-parsing/main/%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_person_result.png)
